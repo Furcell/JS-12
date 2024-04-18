@@ -18,7 +18,7 @@ function validateUsername() {
     }   
 
     if (usernameErrorSpan.textContent === "") {
-        usernameErrorSpan.innerHTML = ""; // Hide the error span
+        usernameErrorSpan.innerHTML = ""; 
     }  
     
     usernameErrorSpan.textContent = "Username is valid!";
