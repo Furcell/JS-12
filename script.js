@@ -1,7 +1,7 @@
 "use strict";
 
 // JS-12
-document.getElementById("validateButton").addEventListener("click", validateUsername);
+document.getElementById("usernameForm").addEventListener("click", validateUsername);
 
 function validateUsername() {
     let usernameInput = document.getElementById("username").value;
@@ -17,10 +17,11 @@ function validateUsername() {
         return false; 
     }   
 
-    if (usernameErrorSpan.textContent === "") {
+    if (usernameInput === "") {
         usernameErrorSpan.innerHTML = ""; // Hide the error span
     }  
     
     usernameErrorSpan.textContent = "Username is valid!";
+    preventDefault();
     return true;
 }
